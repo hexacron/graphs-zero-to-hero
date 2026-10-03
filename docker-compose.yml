@@ -1,0 +1,25 @@
+# Lab stack. All ports bind to localhost only.
+services:
+  neo4j:
+    image: neo4j:5-community
+    ports: ["127.0.0.1:7474:7474", "127.0.0.1:7687:7687"]
+    environment:
+      NEO4J_AUTH: neo4j/change-me-now
+      NEO4J_PLUGINS: '["apoc"]'
+    volumes: ["neo4j-data:/data"]
+
+  oxigraph:
+    image: ghcr.io/oxigraph/oxigraph:latest
+    command: serve --location /data --bind 0.0.0.0:7878
+    ports: ["127.0.0.1:7878:7878"]
+    volumes: ["oxigraph-data:/data"]
+
+  ollama:
+    image: ollama/ollama:latest
+    ports: ["127.0.0.1:11434:11434"]
+    volumes: ["ollama-data:/root/.ollama"]
+
+volumes:
+  neo4j-data:
+  oxigraph-data:
+  ollama-data:

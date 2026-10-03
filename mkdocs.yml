@@ -1,0 +1,52 @@
+site_name: "Graphs for Agentic Engineering: Zero to Hero"
+site_description: Knowledge graphs, RDF, embeddings, chunking, and GraphRAG for agentic engineers.
+# site_url: https://YOUR-USER.github.io/graphs-zero-to-hero/
+# repo_url: https://github.com/YOUR-USER/graphs-zero-to-hero
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: {icon: material/weather-sunny, name: Light mode}
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - toc: {permalink: true}
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist: {custom_checkbox: true}
+
+nav:
+  - Start: index.md
+  - Graph track:
+      - "0. Graph fundamentals": modules/00-graph-fundamentals.md
+      - "1. Property graphs and Cypher": modules/01-property-graphs.md
+      - "2. RDF and SPARQL": modules/02-rdf-sparql.md
+      - "3. Ontologies and schemas": modules/03-ontologies.md
+  - Vector track:
+      - "4. Embeddings": modules/04-embeddings.md
+      - "5. Chunking": modules/05-chunking.md
+      - "6. Retrieval and RAG": modules/06-retrieval-rag.md
+  - Fusion track:
+      - "7. KGs from text": modules/07-kg-from-text.md
+      - "8. GraphRAG": modules/08-graphrag.md
+      - "9. Graph algorithms": modules/09-graph-algorithms.md
+      - "10. Agent memory and tools": modules/10-agent-memory.md
+      - "11. Eval and ops": modules/11-eval-ops.md
+  - Capstone: capstone.md
+  - Reference:
+      - Reading list: reference.md
+      - Glossary: glossary.md
