@@ -4,7 +4,7 @@ A hands-on course on knowledge graphs, RDF, embeddings, chunking, and GraphRAG f
 
 12 modules and 1 capstone. Each module has a goal, the concepts, a lab, and an exit check. About 60 to 80 hours.
 
-**Read the course:** https://YOUR-USER.github.io/graphs-zero-to-hero/
+**Read the course:** https://hexacron.github.io/graphs-zero-to-hero/
 
 ## Start
 
